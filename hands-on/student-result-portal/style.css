@@ -1,0 +1,4 @@
+/* Optional custom styling on top of Bootstrap */
+.card-header { background: #fff; }
+.pass-badge { color: #198754; }
+.fail-badge { color: #dc3545; }

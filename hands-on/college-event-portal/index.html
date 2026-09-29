@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spectrum 2026 – College Event Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="#home">Spectrum 2026</a>
+  <button id="menuBtn" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <nav id="nav">
+    <a href="#home">Home</a><a href="#events">Events</a><a href="#schedule">Schedule</a>
+    <a href="#gallery">Gallery</a><a href="#register">Registration</a><a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <h1>Spectrum 2026<br>Annual College Festival</h1>
+  <p>Three days of code, culture and competition. 12–14 November, Main Campus.</p>
+  <a class="btn" href="#register">Register now</a>
+</section>
+
+<section class="wrap">
+  <h2>Latest announcements</h2>
+  <ul id="announceList" class="announce"></ul>
+  <div class="inline-form">
+    <input id="announceInput" type="text" placeholder="Add an announcement" aria-label="New announcement">
+    <button class="btn" id="announceBtn" type="button">Post</button>
+  </div>
+</section>
+
+<section id="events" class="wrap">
+  <h2>Events</h2>
+  <div class="filters" id="filters">
+    <button class="chip active" data-cat="all">All</button>
+    <button class="chip" data-cat="Technical">Technical</button>
+    <button class="chip" data-cat="Cultural">Cultural</button>
+    <button class="chip" data-cat="Sports">Sports</button>
+  </div>
+  <div id="eventGrid" class="grid"></div>
+</section>
+
+<section id="schedule" class="wrap">
+  <h2>Schedule</h2>
+  <div class="table-scroll">
+    <table>
+      <thead><tr><th>Date</th><th>Time</th><th>Event</th><th>Venue</th></tr></thead>
+      <tbody id="scheduleBody"></tbody>
+    </table>
+  </div>
+</section>
+
+<section id="gallery" class="wrap">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <figure style="--c:#e63946">🎤<figcaption>Battle of Bands</figcaption></figure>
+    <figure style="--c:#2a9d8f">💻<figcaption>Hackathon night</figcaption></figure>
+    <figure style="--c:#f4a261">💃<figcaption>Dance finale</figcaption></figure>
+    <figure style="--c:#457b9d">⚽<figcaption>Football cup</figcaption></figure>
+    <figure style="--c:#6a4c93">🎨<figcaption>Art wall</figcaption></figure>
+    <figure style="--c:#118ab2">🏆<figcaption>Prize ceremony</figcaption></figure>
+  </div>
+  <p class="note">Replace these tiles with your own photos: <code>&lt;img src="images/photo1.jpg" alt="..."&gt;</code></p>
+</section>
+
+<section id="register" class="wrap narrow">
+  <h2>Event registration</h2>
+  <form id="regForm" novalidate>
+    <label>Full name<input id="name" type="text"></label><span class="err" id="e-name"></span>
+    <label>Email<input id="email" type="email"></label><span class="err" id="e-email"></span>
+    <label>Mobile number<input id="mobile" type="tel" maxlength="10"></label><span class="err" id="e-mobile"></span>
+    <label>Department
+      <select id="dept"><option value="">Select department</option><option>CSE</option><option>CSE (AI &amp; DS)</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option></select>
+    </label><span class="err" id="e-dept"></span>
+    <label>Year
+      <select id="year"><option value="">Select year</option><option>1</option><option>2</option><option>3</option><option>4</option></select>
+    </label><span class="err" id="e-year"></span>
+    <label>Event<select id="eventSelect"><option value="">Select event</option></select></label><span class="err" id="e-event"></span>
+    <button class="btn" type="submit">Register</button>
+  </form>
+  <div id="success" class="success" hidden></div>
+</section>
+
+<section id="contact" class="wrap narrow">
+  <h2>Contact</h2>
+  <p>Festival Office, Main Block, Room 101<br>Email: spectrum@college.edu · Phone: 98765 43210</p>
+  <form id="contactForm" novalidate>
+    <label>Your name<input id="cName" type="text"></label>
+    <label>Email<input id="cEmail" type="email"></label>
+    <label>Message<textarea id="cMsg" rows="4"></textarea></label>
+    <span class="err" id="e-contact"></span>
+    <button class="btn" type="submit">Send message</button>
+  </form>
+  <div id="contactOk" class="success" hidden>Thanks! We will reply within two days.</div>
+</section>
+</main>
+
+<footer>© 2026 Spectrum – Your College Name. All rights reserved.</footer>
+<script src="script.js"></script>
+</body>
+</html>
