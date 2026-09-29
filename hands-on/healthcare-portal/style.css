@@ -1,0 +1,12 @@
+:root{--teal:#0b6e6e;--deep:#08485a;--mint:#e6f4f1}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:#f5faf9;color:#1d2b2f}
+.navbar,footer{background:var(--deep)}
+.nav-link:hover,.nav-link:focus-visible{color:#9fe3d6!important}
+.hero{background:linear-gradient(120deg,var(--deep),var(--teal))}
+.section-head{background:var(--mint);color:var(--deep);font-weight:600}
+.btn-primary{--bs-btn-bg:var(--teal);--bs-btn-border-color:var(--teal);--bs-btn-hover-bg:var(--deep);--bs-btn-hover-border-color:var(--deep)}
+.tech{background:var(--teal);font-size:1rem;padding:.6em 1em}
+.health-card dt{font-weight:600;color:var(--deep)}
+.health-card dd{margin-bottom:.4rem}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
